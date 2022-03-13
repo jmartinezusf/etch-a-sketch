@@ -1,0 +1,20 @@
+body {
+    background-color: #181818;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+
+}
+
+.cell {
+    flex: 1;
+    padding: 1em;
+    border: 1px solid red;
+}
+
+.cell:hover {
+    background-color: aqua;
+}

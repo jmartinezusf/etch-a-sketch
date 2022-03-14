@@ -1,19 +1,8 @@
 const container = document.querySelector('#container');
 const clearBtn = document.querySelector('.clear');
 const newBtn = document.querySelector('.new');
-const title = document.createElement('h1');
 
-
-
-createGrid(16,16);
-
-newBtn.addEventListener('click', function() {
-    let userInput = prompt('How many squares? [0 - 100]', '');
-
-    if (userInput <= 100) {
-        createGrid(userInput, userInput);
-    } 
-});
+createGrid(20,20);
 
 function clearGrid() {
     container.removeChild(cell);
@@ -34,23 +23,19 @@ function createGrid(row, column) {
                     cell.setAttribute('style', 'background: #900c3f');
                     cell.addEventListener('mousedown', () => {
                         cell.setAttribute('style', 'background: #581845');
-                        cell.addEventListener('mousedown', () => {
-                            cell.setAttribute('style', 'background: #fff');
-                        });
                     });
                 });
             });
         });
 
-
         clearBtn.addEventListener('click', clearGrid);
 
-
-        function clearGrid() {
-            container.removeChild(cell);
-            } 
-        }
     }
+}
+
+function clearGrid() {
+    window.location.reload();
+}
 
 
     

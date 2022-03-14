@@ -24,12 +24,11 @@ p{
 }
 
 .btn-container {
-    width: 200px;
+    width: 100px;
     margin: auto;
     display: flex;
     justify-content: center;
-    padding: 5em;
-    gap: 2em;
+    padding: 1em;
 }
 
 div.fadeOut {
@@ -52,6 +51,7 @@ div.fadeOut {
     flex: 1;
     padding: 1em;
     background: #fff;
+    border-radius: 2px;
 }
 
 

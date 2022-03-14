@@ -1,7 +1,9 @@
 const container = document.querySelector('#container');
 const clearBtn = document.querySelector('.clear');
 const newBtn = document.querySelector('.new');
-let cell = document.createElement('div');
+const title = document.createElement('h1');
+
+
 
 createGrid(16,16);
 
@@ -24,7 +26,22 @@ function createGrid(row, column) {
         let cell = document.createElement('div');
         container.appendChild(cell).className = 'cell';
 
+        cell.addEventListener('mousedown', () => {
+            cell.setAttribute('style', 'background: #ff5733');
+            cell.addEventListener('mousedown', () => {
+                cell.setAttribute('style', 'background: #c70039');
+                cell.addEventListener('mousedown', () => {
+                    cell.setAttribute('style', 'background: #900c3f');
+                    cell.addEventListener('mousedown', () => {
+                        cell.setAttribute('style', 'background: #581845');
+                    });
+                });
+            });
+        });
+
+
         clearBtn.addEventListener('click', clearGrid);
+
 
         function clearGrid() {
             container.removeChild(cell);

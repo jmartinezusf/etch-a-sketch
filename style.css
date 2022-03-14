@@ -37,6 +37,8 @@ div.fadeOut {
 }
 
 #container {
+    margin: auto;
+    width: 1000px;
     display: flex;
     flex-wrap: wrap;
     gap: .5em;

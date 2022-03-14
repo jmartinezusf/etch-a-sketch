@@ -34,6 +34,9 @@ function createGrid(row, column) {
                     cell.setAttribute('style', 'background: #900c3f');
                     cell.addEventListener('mousedown', () => {
                         cell.setAttribute('style', 'background: #581845');
+                        cell.addEventListener('mousedown', () => {
+                            cell.setAttribute('style', 'background: #fff');
+                        });
                     });
                 });
             });
